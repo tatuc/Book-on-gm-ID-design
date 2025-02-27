@@ -3,7 +3,7 @@
 Similar to what is provided under "closed-source," this folder contains files that can be used for lookup-table generation with open-source tools and process technologies. Shown below is a typical simulation setup. The four-dimensional sweep is implemented using for-loops in Ngspice's control language. This executes relatively fast (a few minutes for a complete sweep).
 
 
-<img src="./sky130/techsweep_nfet_01v8.png" width="500" />
+<img src="./sky130/techsweep_nfet_01v8.png" width="800" />
 
 
 **What You Need**
@@ -23,3 +23,5 @@ The sub-folders for SKY130 and IHP-SG13G2 technologies contain similar files tha
 *techsweep_txt_to_mat.ipynb*: Jupyter notebook that translates the raw simulation text file to mat format.
 
 **.mat*: Lookup tables in Matlab file format. These can be used within Matlab scripts or Python (using pygmid).
+
+*techsweep_plots_from_mat.ipynb*: Jupyter notebook that generates a variety of plots from the lookup table data.
