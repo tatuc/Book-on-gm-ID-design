@@ -1,7 +1,7 @@
 # SKY130
 
-[SKY130 PDK Documentation](https://skywater-pdk.readthedocs.io/en/main/)  
-[SKY130 PDK](https://github.com/google/skywater-pdk)
+[PDK Documentation](https://skywater-pdk.readthedocs.io/en/main/)  
+[PDK GitHub](https://github.com/google/skywater-pdk)
 
 ## Related presentation material 
 [IEEE SSCS Chipathon, July 25, 2024: Transistor sizing basics](https://docs.google.com/presentation/d/1CmZlJf_GPc-H4LRFmhwvaIzZadMvDUaG/present?slide=id.p1)  
