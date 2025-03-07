@@ -1,10 +1,10 @@
 ** sch_path: /foss/designs/Book-on-gm-ID-design/starter_files_open_source_tools/sky130/techsweep_nfet_01v8.sch
 **.subckt techsweep_nfet_01v8
-vg g GND DC 0.9 AC 1
-vd d GND 0.9
-vb b GND 0
-Hn n GND vd 1
-XM1 d g GND b sky130_fd_pr__nfet_01v8 L={lx} W={wx} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+vg g 0 DC 0.9 AC 1
+vd d 0 0.9
+vb b 0 0
+Hn n 0 vd 1
+XM1 d g 0 b sky130_fd_pr__nfet_01v8 L={lx} W={wx} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 **** begin user architecture code
 
@@ -59,8 +59,10 @@ write techsweep_nfet_01v8.raw
 .save @m.xm1.msky130_fd_pr__nfet_01v8[cdd]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[cgb]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[cgd]
+.save @m.xm1.msky130_fd_pr__nfet_01v8[cgdo]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[cgg]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[cgs]
+.save @m.xm1.msky130_fd_pr__nfet_01v8[cgso]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[css]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[gds]
 .save @m.xm1.msky130_fd_pr__nfet_01v8[gm]
@@ -78,5 +80,4 @@ write techsweep_nfet_01v8.raw
 
 **** end user architecture code
 **.ends
-.GLOBAL GND
 .end

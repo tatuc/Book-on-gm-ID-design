@@ -87,22 +87,22 @@ write techsweep_pfet_01v8.raw
 "}
 C {sky130_fd_pr/corner.sym} 1060 -750 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/title.sym} 160 -40 0 0 {name=l5 author="Boris Murmann"}
-C {devices/ngspice_get_value.sym} 1010 -290 0 0 {name=r1 node=v(@m.xm1.msky130_fd_pr__pfet_01v8[vth])
+C {devices/ngspice_get_value.sym} 1120 -170 0 0 {name=r1 node=v(@m.xm1.msky130_fd_pr__pfet_01v8[vth])
 descr="Vt="}
-C {devices/launcher.sym} 940 -410 0 0 {name=h1
+C {devices/launcher.sym} 940 -390 0 0 {name=h1
 descr="load op & annotate" 
 tclcommand="xschem raw_read $netlist_dir/techsweep_pfet_01v8.raw; set show_hidden_texts 1; xschem annotate_op"}
-C {devices/launcher.sym} 940 -450 0 0 {name=h3
+C {devices/launcher.sym} 940 -430 0 0 {name=h3
 descr="save, netlist & simulate"
 tclcommand="xschem save; xschem netlist; xschem simulate"}
-C {devices/ngspice_get_value.sym} 1010 -250 0 0 {name=r2 node=@m.xm1.msky130_fd_pr__pfet_01v8[cgg]
+C {devices/ngspice_get_value.sym} 1010 -290 0 0 {name=r2 node=@m.xm1.msky130_fd_pr__pfet_01v8[cgg]
 descr="cgg="}
 C {devices/ngspice_get_expr.sym} 1120 -210 0 0 {name=r4 
 node="[format %.4g [expr [ngspice::get_node \{@m.xm1.msky130_fd_pr__pfet_01v8[gm]\}] / [ngspice::get_node \{@m.xm1.msky130_fd_pr__pfet_01v8[gds]\}]]]"
 descr="gm/gds="}
-C {devices/ngspice_get_value.sym} 1010 -210 0 0 {name=r3 node=@m.xm1.msky130_fd_pr__pfet_01v8[capbd]
+C {devices/ngspice_get_value.sym} 1010 -250 0 0 {name=r3 node=@m.xm1.msky130_fd_pr__pfet_01v8[capbd]
 descr="capdb="}
-C {devices/ngspice_get_value.sym} 1010 -170 0 0 {name=r5 node=@m.xm1.msky130_fd_pr__pfet_01v8[capbs]
+C {devices/ngspice_get_value.sym} 1010 -210 0 0 {name=r5 node=@m.xm1.msky130_fd_pr__pfet_01v8[capbs]
 descr="capbs="}
 C {devices/ngspice_get_expr.sym} 1120 -250 0 0 {name=r6 
 node="[format %.4g [expr [ngspice::get_node \{@m.xm1.msky130_fd_pr__pfet_01v8[gm]\}] / [ngspice::get_node \{@m.xm1.msky130_fd_pr__pfet_01v8[cgg]\}] / 6.283]]"
@@ -117,8 +117,10 @@ value="
 .save @m.xm1.msky130_fd_pr__pfet_01v8[cdd]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[cgb]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[cgd]
+.save @m.xm1.msky130_fd_pr__pfet_01v8[cgdo]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[cgg]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[cgs]
+.save @m.xm1.msky130_fd_pr__pfet_01v8[cgso]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[css]
 .save @m.xm1.msky130_fd_pr__pfet_01v8[gds] 
 .save @m.xm1.msky130_fd_pr__pfet_01v8[gm] 
@@ -156,3 +158,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_wire.sym} 530 -320 0 0 {name=p5 sig_type=std_logic lab=0}
+C {devices/ngspice_get_value.sym} 1010 -170 0 0 {name=r8 node=@m.xm1.msky130_fd_pr__pfet_01v8[cgdo]
+descr="cgdo="}
+C {devices/ngspice_get_value.sym} 1010 -130 0 0 {name=r9 node=@m.xm1.msky130_fd_pr__pfet_01v8[cgso]
+descr="cgso="}
