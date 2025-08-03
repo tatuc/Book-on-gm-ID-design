@@ -46,7 +46,7 @@
 %
 % When more than one parameter is passed to the function as a vector, the output
 % becomes multidimensional. This behavior is inherited from the Matlab function 
-% ìinterpnî, which is at the core of the lookup function. The following example
+% ‚Äúinterpn‚Äù, which is at the core of the lookup function. The following example
 % produces an 11x11 matrix as the output:
 %
 % look_up(nch,'ID', 'VGS', 0:0.1:1, 'VDS', 0:0.1:1)
@@ -151,7 +151,7 @@ if mode == 3
                 y_right = y(idx:end, i);
                 output(i, j) = interp1(x_right, y_right, xdesired(j), par.METHOD, NaN);
                 % If gm/Cgg of gm/Cgs is the x value, find maximum and limit search range to VGS values to the LEFT
-            elseif strcmp(numerator,'GM') && (strcmp(denominator,'CGG') || strcmp(denominator,'CGG'))
+            elseif strcmp(numerator,'GM') && strcmp(denominator,'CGG')
                 x_left = x(1:idx, i);
                 y_left = y(1:idx, i);
                 output(i, j) = interp1(x_left, y_left, xdesired(j), par.METHOD, NaN);
